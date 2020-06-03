@@ -1,3 +1,4 @@
+package tp;
 
 /* d) Un programa que cree un buffer de dimensión 2 y active concurrentemente un consumidor
 y un productor. */

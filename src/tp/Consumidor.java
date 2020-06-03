@@ -1,3 +1,4 @@
+package tp;
 
 /* c) Una clase consumidor (que extienda de Thread) que muestre por pantalla los valores que
 toma de un buffer pasado al momento de su creación. */

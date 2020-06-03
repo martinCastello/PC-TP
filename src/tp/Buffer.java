@@ -1,3 +1,4 @@
+package tp;
 
 /* a) Un buffer (FIFO) de números enteros cuya dimensión está prefijada al momento de su
 creación. */

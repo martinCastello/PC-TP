@@ -1,3 +1,4 @@
+package tp;
 
 /* b) Una clase productor (que extienda de Thread) que agregue números naturales consecutivos
 a un buffer dado al momento de creación. */
