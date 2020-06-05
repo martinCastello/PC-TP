@@ -7,12 +7,11 @@ public class Countdown {
 		this.counter = counter;
 	}
 
-	public synchronized void dec() throws InterruptedException {
-		while (zero()) wait();
+	public synchronized void dec() {
 		counter--;
-		if(!zero())
-			notifyAll();
 	}
 
-	public synchronized boolean zero() { return counter > 0; }
+	public synchronized void zero() throws InterruptedException { 
+		while(counter > 0) wait(); 
+	}
 }
