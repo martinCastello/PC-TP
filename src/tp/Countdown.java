@@ -9,6 +9,8 @@ public class Countdown {
 
 	public synchronized void dec() {
 		counter--;
+		if(counter <= 0)
+			notify();
 	}
 
 	public synchronized void zero() throws InterruptedException { 

@@ -31,7 +31,7 @@ public class DummyTask implements Runnable{
 	
 	@Override
 	public void run() {
-		System.out.println("Task row ["+ this.numRow + "] running");
+//		System.out.println("Task row ["+ this.numRow + "] running");
 		
 		for (int i=0; i<this.matriz.length; i++) {
 			List<Integer> numbersRow = new ArrayList<Integer>();

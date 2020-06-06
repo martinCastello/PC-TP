@@ -6,6 +6,7 @@ class Buffer {
 	private Runnable[] data;
 	private int begin = 0, end = 0;
 	
+	//Capaz no es necesario asignarle un tamano
 	public Buffer(int tamano) {
 		this.n = tamano;
 		this.data = new Runnable[this.n+1];

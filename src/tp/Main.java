@@ -5,12 +5,16 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Scanner;
+
+//no queremos que usen synchronizedList, el wrapper synchronized lo tienen que hacer ustedes
 
 public class Main {
 
 	public static void main ( String [] args ) throws InterruptedException, IOException {
 		System.out.println("Indique la cantidad de LatinWorker a utilizar: ");
-		int quantityWorkersByUser = System.in.read();
+		Scanner sc = new Scanner(System.in);
+		int quantityWorkersByUser = sc.nextInt();
 		int quantityWorkers = quantityWorkersByUser;
 		Date initialDate = new Date();
 		File file = new File(".\\src\\inputs-ejemplo");
