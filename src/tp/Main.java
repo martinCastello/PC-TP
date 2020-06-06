@@ -9,12 +9,17 @@ import java.util.Date;
 public class Main {
 
 	public static void main ( String [] args ) throws InterruptedException, IOException {
+		System.out.println("Indique la cantidad de LatinWorker a utilizar: ");
+		int quantityWorkersByUser = System.in.read();
+		int quantityWorkers = quantityWorkersByUser;
 		Date initialDate = new Date();
 		File file = new File(".\\src\\inputs-ejemplo");
 		FileReader fr = new FileReader(file);
 		BufferedReader br=new BufferedReader(fr); 
 		int rows = Integer.parseInt(br.readLine());
-		ThreadPool threadPool = new ThreadPool(10, rows, initialDate);
+		if(quantityWorkersByUser > rows)
+			quantityWorkers = rows;
+		ThreadPool threadPool = new ThreadPool(quantityWorkers, rows, initialDate);
 		for(int i=1;i<=rows;i++) {
 			threadPool.launch(new DummyTask(br.readLine(), i));
 		}
