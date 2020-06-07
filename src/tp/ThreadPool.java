@@ -32,7 +32,7 @@ public class ThreadPool {
 			buffer.push(new PoisonPill());
 		}
 		counter.zero();
-		System.out.println("SortedList " + sortedList.getResult());
+		System.out.println("Las lineas " + sortedList.getResult() + " son cuadrados latinos");
 		double seconds = (new Date().getTime() - this.initialDate.getTime()) / 1000.0;
 		System.out.println("Tiempo transcurrido en segundos: " + seconds);
 	}
