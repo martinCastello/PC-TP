@@ -27,6 +27,7 @@ public class Main {
 		for(int i=1;i<=rows;i++) {
 			threadPool.launch(new DummyTask(br.readLine(), i));
 		}
+		fr.close();
 		threadPool.stop();
 		
 //		StringBuffer sb=new StringBuffer(); 
@@ -35,7 +36,7 @@ public class Main {
 //			sb.append(line);      
 //			sb.append("\n");       
 //		}  
-		fr.close();
+//		fr.close();
 //		System.out.println("Contents of File: ");  
 //		System.out.println(sb.toString());
 	}
