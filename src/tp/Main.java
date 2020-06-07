@@ -17,7 +17,7 @@ public class Main {
 		int quantityWorkersByUser = sc.nextInt();
 		int quantityWorkers = quantityWorkersByUser;
 		Date initialDate = new Date();
-		File file = new File(".\\src\\inputs-ejemplo");
+		File file = new File(".\\src\\inputs-ejemplo-1000");
 		FileReader fr = new FileReader(file);
 		BufferedReader br=new BufferedReader(fr); 
 		int rows = Integer.parseInt(br.readLine());

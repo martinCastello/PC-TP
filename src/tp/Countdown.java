@@ -9,7 +9,7 @@ public class Countdown {
 
 	public synchronized void dec() {
 		counter--;
-		if(counter <= 0)
+		if(counter == 0)
 			notify();
 	}
 
