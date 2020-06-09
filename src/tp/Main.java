@@ -17,7 +17,7 @@ public class Main {
 		int quantityWorkersByUser = sc.nextInt();
 		int quantityWorkers = quantityWorkersByUser;
 		Date initialDate = new Date();
-		File file = new File(".\\src\\inputs-ejemplo");
+		File file = new File("./src/inputs-ejemplo");
 		FileReader fr = new FileReader(file);
 		BufferedReader br=new BufferedReader(fr); 
 		int rows = Integer.parseInt(br.readLine());
@@ -29,16 +29,7 @@ public class Main {
 		}
 		fr.close();
 		threadPool.stop();
-		
-//		StringBuffer sb=new StringBuffer(); 
-//		String line;
-//		while((line=br.readLine())!=null){  
-//			sb.append(line);      
-//			sb.append("\n");       
-//		}  
-//		fr.close();
-//		System.out.println("Contents of File: ");  
-//		System.out.println(sb.toString());
+
 	}
 
 }

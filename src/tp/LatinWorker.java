@@ -21,19 +21,19 @@ public class LatinWorker extends Thread{
 				try {
 					task.run();
 					DummyTask dummyTask = (DummyTask) task;
-					System.out.println("LatinWorker[" + this.number + "] ejecutó tarea [" + dummyTask.getNumRow() + "]");
+					System.out.println("LatinWorker[" + this.number + "] ejecutÃ³ tarea [" + dummyTask.getNumRow() + "]");
 					sortedList.insert(dummyTask.getNumRow());
 					counter.dec();
 				} catch(NoPerfectException e) {
 					DummyTask dummyTask = (DummyTask) task;
-					System.out.println("LatinWorker[" + this.number + "] ejecutó tarea [" + dummyTask.getNumRow() + "]");
+					System.out.println("LatinWorker[" + this.number + "] ejecutÃ³ tarea [" + dummyTask.getNumRow() + "]");
 					counter.dec();
 				} catch(PoisonException e) {
 					throw new PoisonException();
 				}	
 			}
 		} catch(PoisonException e) {
-			System.out.println("LatinWorker[" + this.number + "] terminó");
+			System.out.println("LatinWorker[" + this.number + "] terminÃ³");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
